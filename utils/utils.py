@@ -181,7 +181,8 @@ def melting_temp(seq, dnac, na, k, tris, mg):
 
 def nn_thermodynamics(seq):
 
-	# Code adapted from biopython. Open-source but check copyright code before use
+	# Code adapted from biopython. 
+	# Copyright (c) 1999-2021, The Biopython Contributors All rights reserved.
 	seq = seq
 	comp = complement(seq)
 	dh_sum = 0
