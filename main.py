@@ -52,10 +52,10 @@ def write_data(seq_names, seq_pool, dnac, Na, K, Tris, Mg):
 							 'sequence',
 							 'complement',
 							 'length',
-							 'binary'
+							 'binary',
 							 'gc content (%)',
 							 'molecular weight (g/mol)',
-							 'extinction (M-1 cm-1)', 'Tm (C)',
+							 'extinction (M-1 cm-1)',
 							 'salt adjusted melting temp (C)',
 							 'delta H kcal/mol',
 							 'delta S cal/(mol*k)'
