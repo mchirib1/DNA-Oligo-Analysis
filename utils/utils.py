@@ -189,9 +189,8 @@ def nn_thermodynamics(seq):
 	d_h = 0  # Names for indexes
 	d_s = 1  # 0 and 1
 
-	# Allawi and SantaLucia (1997), Biochemistry 36: 10581-10594
-	nn_table =	SantaLucia & Hicks (2004), Annu. Rev. Biophys. Biomol. Struct 33: 415-440
-	{"init": (0.2, -5.7),
+	#SantaLucia & Hicks (2004), Annu. Rev. Biophys. Biomol. Struct 33: 415-440
+	nn_table =	{"init": (0.2, -5.7),
 	"init_A/T": (2.2, 6.9),
 	"init_G/C": (0, 0),
 	"init_oneG/C": (0, 0),
@@ -209,6 +208,7 @@ def nn_thermodynamics(seq):
 	"GC/CG": (-9.8, -24.4),
 	"GG/CC": (-8.0, -19.0)}
 
+	# Allawi and SantaLucia (1997), Biochemistry 36: 10581-10594
 	# {
  #    "init": (0, 0), "init_A/T": (2.3, 4.1), "init_G/C": (0.1, -2.8),
  #    "init_oneG/C": (0, 0), "init_allA/T": (0, 0), "init_5T/A": (0, 0),
@@ -217,6 +217,8 @@ def nn_thermodynamics(seq):
  #    "CA/GT": (-8.5, -22.7), "GT/CA": (-8.4, -22.4), "CT/GA": (-7.8, -21.0),
  #    "GA/CT": (-8.2, -22.2), "CG/GC": (-10.6, -27.2), "GC/CG": (-9.8, -24.4),
  #    "GG/CC": (-8.0, -19.9)} 
+
+	print(f"For strand {seq}")
 
 	# Type: General initiation value
 	dh_sum += nn_table["init"][d_h]
@@ -332,7 +334,7 @@ def check_repeats(strand_pool):
 
 	unique = []
 	
-	for strand in seq:
+	for strand in strand_pool:
 
 		if (strand in unique) == False:
 			unique.append(strand)
