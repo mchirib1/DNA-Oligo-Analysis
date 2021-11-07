@@ -40,7 +40,7 @@ def write_data(seq_names, seq_pool, dnac, Na, K, Tris, Mg):
 					 gc_content(seq_pool[i]),
 					 molecular_weight(seq_pool[i]),
 					 extinction_coeff(seq_pool[i]),
-					 melting_temp(seq_pool[i], 2.5, 5, 0, 10, 1.2)[0],
+					 melting_temp(seq_pool[i], dnac, Na, K, Tris, Mg)[0],
 					 nn_thermodynamics(seq_pool[i])[0],
 					 nn_thermodynamics(seq_pool[i])[1]
 					 ])
